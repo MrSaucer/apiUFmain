@@ -1,8 +1,14 @@
 import express from 'express';
+import cors from 'cors';
 import { buscarUfs, buscarUfPorId, buscarUfsPorNome } from './servicos/servico.js';
 
 
 const app = express();
+app.use(cors({
+  origin: 'https://api-ufs.onrender.com', 
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true,
+}));
 
 
 app.get('/ufs', (req, res) => {
