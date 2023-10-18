@@ -5,7 +5,7 @@ import { buscarUfs, buscarUfPorId, buscarUfsPorNome } from './servicos/servico.j
 
 const app = express();
 app.use(cors({
-  origin: 'https://api-ufs.onrender.com', 
+  origin: 'https://api-ufs.onrender.com/ufs', 
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true,
 }));
